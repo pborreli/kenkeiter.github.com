@@ -1,0 +1,28 @@
+title:            Ken Keiter
+description:      A jekyll theme. Because I scribble.
+url:              http://kenkeiter.com/
+signoff:          Ken
+disqus_shortname: kenkeiter
+facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
+google_analytics: UA-17099432-1
+
+links:
+  - name:         About
+    url:          /about
+  - name:         GitHub
+    url:          http://github.com/kenkeiter/
+    external:     true
+  - name:         Twitter
+    url:          http://twitter.com/kenkeiter/
+    external:     true
+  - name:         LinkedIn
+    url:          http://linkedin.com/in/kenkeiter
+    external:     true
+  - name:         E-Mail
+    external:     true
+    url:          mailto:ken@kenkeiter.com
+pygments:         true
+permalink:        pretty
+markdown:         rdiscount
+rdiscount:
+  extensions:     [smart]

@@ -1,0 +1,157 @@
+---
+layout: post
+title: "The Setup: Development Environment"
+date: 2012-07-11 15:27:31
+---
+There are very few things as personal as one's dotfiles and development environment. Every little tweak requires getting used to, but it turns out that it's hard to remember all the steps to get everything set up. In this post, I'll show you how I have my machine set up -- it'll serve as a great reminder for me, and hopefully provide some inspiration or tricks for you, the reader. These instructions will:
+
+* tweak Max OS Lion for efficiency, increases in navigability, and cleanliness;
+* give you global hotkeys to perform useful tasks (like locking your machine, searching, rearranging windows, etc);
+* give you a list of my favorite tools, what they do, and why I use them;
+* help you get Terminal set up nicely with colors, git completion, etc;
+* make some slight tweaks to Sublime Text.
+
+So let's get started!
+
+h2. The Fresh Install
+
+First things first. Before even opening the browser, let's get the operating system set up. There are a few tweaks I like to make to OS X which facilitate development, and make things just a bit faster. Run the following commands in the terminal, at your discretion:
+
+{% highlight bash %}
+# Enable keyboard access for all controls/modals
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+# Disable OS X press-and-hold keys to increase key repeat rate.
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+# Set up a fast key repeat rate.
+defaults write NSGlobalDomain KeyRepeat -int 0.02
+# Decrease the delay until keys are repeated.
+defaults write NSGlobalDomain InitialKeyRepeat -int 12
+# Disable autocorrect (srsly.)
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Enable sub-pixel rendering even if you don't have a fancy Apple display
+defaults write NSGlobalDomain AppleFontSmoothing -int 2
+
+# Automatically hide and show the dock
+defaults write com.apple.dock autohide -bool true
+# Make hidden applications semi-transparent on the dock
+defaults write com.apple.dock showhidden -bool true
+# Allow Finder to quit (using ⌘Q)
+defaults write com.apple.finder QuitMenuItem -bool true
+# Show all filename extensions in the finder
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+# Show the path bar in the Finder
+defaults write com.apple.finder ShowPathbar -bool true
+# Expand the Save panel by default in all applications
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+# Expand the Printer panel by default in all applications
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+
+# Enable airdrop-over-ethernet for bridged networks
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
+# Avoid creating DSStore files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Display the full POSIX path as the Finder window's title
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+# Disable the warning when you change a file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+# Disable the warning shown before you empty the trash
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
+# Empty the trash securely by default (yes, this will be time consuming)
+defaults write com.apple.finder EmptyTrashSecurely -bool true
+# Reveal the ~/Library folder
+chflags nohidden ~/Library
+
+# Increase the window resize speed for Cocoa apps
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+
+# Require password immediately after sleep or screensaver begins.
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# Only use UTF-8 in Terminal.app
+defaults write com.apple.terminal StringEncodings -array 4
+
+{% endhighlight %}
+
+Most of those are just fixes to make things faster. No harm will come to your machine, but I don't know that they'll work on anything other than Lion. Now, let's get some OS-related extensions installed:
+
+I'm pretty security conscious, and I lock my machine when I walk away from it. Since that's not typically too easy on a Mac, I use "LockTight":http://www.gkoya.com/2006/11/23/locktight-for-mac-os-x-intel/, which allows you to assign a global key sequence to start the screen saver and lock your machine. It's kind of abandonware, at the moment, and only works in 32-bit mode -- but it still works on Lion, and the source code is included in the download, should you wish to recompile it with 64-bit support. I typically assign @⌘ + ⇧ + L@ as my lock command, since it can be executed with one hand from one side of the keyboard. 
+
+I also use Objective Development's "Little Snitch":http://www.obdev.at/products/littlesnitch/index.html which is well worth the $29.95 cost. It enables you to set strict rules about which applications are allowed network access, which is useful if you don't want applications phoning home without your knowledge.
+
+Next up, "Divvy":http://mizage.com/ is a must. It allows you to set up activation and global hotkeys which rearrange windows on command without any mouse interaction. It's the best $3.00 I've ever spent. 
+
+You'll want "Growl":http://growl.info/, which is used by almost every application to push little status updates to you. It's in the app store, it's cheap, and it's open source. 
+
+Finally, get "Alfred":http://www.alfredapp.com/ and the "Alfred Power Pack":http://www.alfredapp.com/powerpack/ installed. Don't be thrown off by the color scheme -- once you get used to using it, people will have to pry it from your cold, dead hands. It basically handles everything from search, to launching of applications, to math, etc. on your computer, and does an excellent job augmenting Spotlight. Typically, I assign Alfred to the @⌘ + ␣@ global hotkey, because I use it just that frequently.
+
+h2. Applications
+
+You may or may not use/need these, but here's a list of the software I use on a semi-daily basis:
+
+* *"0xED":http://www.suavetech.com/0xed/0xed.html* (free) is a nice Cocoa-based hex editor.
+* *"Adobe Creative Suite":http://www.adobe.com/products/creativesuite.html* ($1,784 on "Amazon":http://www.amazon.com/Adobe-CS6-Design-Web-Premium/dp/B007R0RJJQ) is pretty much the de-facto graphics creation toolkit. It's expensive, and I really hate Adobe, but it's worth every dollar.
+* *"Dropbox":http://dropbox.com/:* (free) does an excellent job of keeping your files in sync, and it's free up to a certain size limit.
+* *"Base":http://menial.co.uk/software/base/* (£19.99 GBP) is a nice schema-browser and editor for Sqlite 3 databases. Useful for development.
+* *"IA Writer":http://www.iawriter.com/* ($8.99) is an extremely simple text editor which uses native Markdown for formatting. It's beautiful, features great distraction-free modes, and makes it easy for me to write these posts.
+* *"Wallet":http://www.acrylicapps.com/wallet/mac/* ($19.99) is an awesome credential manager for OS X. I use it because I can't stand how ugly 1Password is, plus it syncs via Dropbox, and with the Wallet iPhone app.
+* *"OmniGraffle Professional":http://www.omnigroup.com/products/omnigraffle/* ($199.99) is an awesome diagramming tool. Well worth the cost -- I use it all the time.
+* *"OmniPlan":http://www.omnigroup.com/products/omniplan/* ($99.99) is a great project planning tool. Works wonders for Gannt charts.
+* *"Things":http://culturedcode.com/things/* ($49.99) lets me keep track of my tasks GTD-style. I'm using the beta, which provides cloud-based sync to the iPhone and iPad apps. I'd wait to buy it until they finish their beta.
+* *"MindNode Pro":http://mindnode.com/* ($9.99) is super useful for mind-mapping, and I especially like it because it can be maniupulated entirely with the keyboard. The non-pro version is free, but the pro version allows you to place images/video/documents in your mind map. Super cool.
+
+h2. Setting Up Development
+
+You're going to need XCode installed, which can be done from the Mac App Store. Once you've got it downloaded and installed, you'll need to install XCode command-line tools, which can be done by opening XCode and, under the XCode menu, opening the @Preferences@ window, choosing the @Downloads@ tab, and clicking @Install@ next to the @Command Line Tools@ component. Once it's done downloading, you should be able to proceed with the following steps.
+
+Next up, you'll need the Homebrew package manager, which I use almost exclusively. It's simple to install, and does its one (relatively complex) job extremely well. See the "Homebrew installations instructions":https://github.com/mxcl/homebrew/wiki/installation to get started.
+
+I use "Git":http://git-scm.com/ for almost everything SCM-related, and the best way to get that installed is either via "their package":http://git-scm.com/download/mac, or Homebrew. If you're using Homebrew (which is my preferred way) you'll want to run @brew install git@ from the command line. It should just work™.
+
+h3. The Terminal
+
+I've created a terminal theme, and make a few additions to my @.bash_profile@ which make dealing with Git repos a bit easier.
+
+First off, I use the wonderful _"Mensch":http://robey.lag.net/2010/06/21/mensch-font.html_ font for both my terminal and IDE. It's based on Menlo, and has been optimized for developers -- it adds clarity to things like brackets and numbers. Download and install it from the link above.
+
+Now you can download and install my Terminal.app theme, which I call "Augmented." Save the "@Augmented.terminal@ theme":/files/the-setup/Augmented.terminal somewhere convenient, and open it. This will install the theme in Terminal.app. You can then open Terminal's preferences, and choose it as the default, if you like it.
+
+Now that you have the Terminal theme installed, the terminal should start to look a little prettier -- so now let's add the Git completion extensions to make things super easy. Edit your @~/.bash_profile@ so that it looks like this:
+
+{% highlight bash %}
+if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
+  . `brew --prefix`/etc/bash_completion.d/git-completion.bash
+fi
+
+export PS1='\[\033[36m\]\W\[\033[m\] $(__git_ps1 "(\[\033[32m\]%s\[\033[m\]) ")\[\033[31m\]→\[\033[m\] '
+export CLICOLOR=1
+export LS_COLORS=exfxcxdxbxegedabagacad
+{% endhighlight %}
+
+Now, if you @cd@ into a Git repository, you'll notice that the current branch is in parens after the directory name, and that you can @git <tab>@ for completion options.
+
+h3. The Editor
+
+I lean *heavily* on "Sublime Text 2":http://www.sublimetext.com/ as my editor. I used to be an emacs and vi user, but as time went on, I needed just a little bit more. I've found Sublime Text to be more than satisfactory, and worth _every cent_ I've paid for it. Don't think, just "buy it":http://www.sublimetext.com/buy -- it's the best $60 you'll ever spend.
+
+I find the default keybindings to me highly satisfactory, so I don't reconfigure them at all. At the same time, since I know so many people who use Sublime Text as their _editor du jour_, I try to keep my configuration relatively stock so that it's easier to move between machines.
+
+Once you've got it installed, you can customize it to your heart's content. I've customized mine like so -- go to @File > Preferences > Settings - User@ and modify the settings so that they match the following:
+
+{% highlight javascript %}
+{
+  "rulers": [80],
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "wrap_width": 80,
+  "font_face": "Mensch"
+}
+{% endhighlight %}
+
+Personally, I'm a big stickler on the whole "console width" issue -- even though it's not as relevant anymore. My settings will create a simple light-gray ruler at the 80-character mark to let you know when you're about to go over.
+
+h3. Hopefully
+
+Hopefully, this has helped you or served as some inspiration for you own setup. Currently, I run these settings on my 27" iMac and a MacBook Pro Retina. I hope they serve you well!

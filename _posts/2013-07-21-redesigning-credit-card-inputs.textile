@@ -4,6 +4,8 @@ title: "Redesigning the Credit Card Input"
 date: 2013-07-21 23:41:31
 disqus: y
 ---
+<a href="http://kenkeiter.com/skeuocard/" target="_blank" class="big-button">Skip the article; try out Skeuocard.</a>
+
 <img src="/files/redesigning-credit-card-inputs/skeuomorph-photo.jpg" />
 
 I remember the first time I went through the checkout process online. I can't remember what I was buying, but I remember the experience. I had just filled out my billing address, when I was presented with a place to enter my credit card information: an array of fields with a select box, laid out in a table with these six-pixel-thick, beveled borders. It had instructions at the top. Enter your date in this format. Put spaces between each number grouping. It looked and felt as though it had been constructed by Soviet scientists during the cold war.

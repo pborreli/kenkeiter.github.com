@@ -48,7 +48,7 @@ By presenting your problem first, and framing your conversation in its terms, yo
 
 h2. 5. Sponsor events, share knowledge.
 
-One of my favorite engineers and all-around good guys, "Joe Stump":http://stu.mp/, gave me a very good hiring tip early on: sponsor events in exchange for the ability to give a 10 minute presentation on how you solved a cool problem. He's had great success with the technique, and we'll be trying it out soon ourselves.
+One of my favorite engineers and all-around good guys, Joe Stump, gave me a very good hiring tip early on: sponsor events in exchange for the ability to give a 10 minute presentation on how you solved a cool problem. He's had great success with the technique, and we'll be trying it out soon ourselves.
 
 h2. 6. It's not all about you.
 
@@ -56,19 +56,15 @@ The allure of being in a startup is just as much about what the engineer will ge
 
 h2. 7. Pay open source committers to do something they already love.
 
-We haven't released much code yet at "Superbly":https://superb.ly/, but my experience at RedHat showed me that open-source projects can be a great recruiting avenue. If you release something useful, and other people start submitting patches, keep track of those people -- find the most committed ones, and offer them jobs. It's not hard to convince somebody that they should be receiving compensation for something they enjoy anyway.
+We haven't released much code yet at Superbly, but my experience at RedHat showed me that open-source projects can be a great recruiting avenue. If you release something useful, and other people start submitting patches, keep track of those people -- find the most committed ones, and offer them jobs. It's not hard to convince somebody that they should be receiving compensation for something they enjoy anyway.
 
 h2. 8. Be consistent, every step of the way.
 
 Your biggest challenge is to make sure that your culture is reflected in every step of the hiring process. From initial outreach, to interviews, to team introductions, you should make sure that you represent the culture you have, and the culture you're trying to create.
 
-I have a CTO voice that I use when I talk to engineers, and it's based heavily on "Alex Payne's":http://al3x.net/ voice. The thing about Alex is that he has an incredible knack for hiring genuine, talented people. Although he recently left "Simple":http://simple.com/, you can walk into their office and immediately feel his influence; every person you meet is the nicest and smartest person you've ever met. That's what I'm trying to create at "Superbly":https://superb.ly/. 
+I have a CTO voice that I use when I talk to engineers, and it's based heavily on "Alex Payne's":http://al3x.net/ voice. The thing about Alex is that he has an incredible knack for hiring genuine, talented people. Although he recently left "Simple":http://simple.com/, you can walk into their office and immediately feel his influence; every person you meet is the nicest and smartest person you've ever met. That's what I'm trying to create at Superbly.
 
 At the same time, we're a young company; we do harmonies of theme songs from _Super Mario Brothers_ as we're leaving the office, and flip for which type of alcohol we're going to drink at our 10-4 meetings[2] -- we need to represent that culture and be true to it, as well, or we won't have a good cultural fit. I do my best to tell both stories in our conversations with engineers.
-
-h2. Shameless Plug
-
-Superbly is hiring engineers right now, too. If you like what you're reading, and don't feel like you should get harrassed to get hired, we'd love to hear from you. Check out "Superbly Careers":http://superb.ly/careers for information on our available opportunities.
 
 fn1. Reload for a new product idea; these come from "It's This for That":http://itsthisforthat.com/. I take *no* responsibility for the combinations.
 

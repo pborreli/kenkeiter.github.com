@@ -98,9 +98,9 @@ You may or may not use/need these, but here's a list of the software I use on a 
 * *"IA Writer":http://www.iawriter.com/* ($8.99) is an extremely simple text editor which uses native Markdown for formatting. It's beautiful, features great distraction-free modes, and makes it easy for me to write these posts.
 * *"Wallet":http://www.acrylicapps.com/wallet/mac/* ($19.99) is an awesome credential manager for OS X. I use it because I can't stand how ugly 1Password is, plus it syncs via Dropbox, and with the Wallet iPhone app.
 * *"OmniGraffle Professional":http://www.omnigroup.com/products/omnigraffle/* ($199.99) is an awesome diagramming tool. Well worth the cost -- I use it all the time.
-* *"OmniPlan":http://www.omnigroup.com/products/omniplan/* ($99.99) is a great project planning tool. Works wonders for Gannt charts.
+* *"OmniPlan":http://www.omnigroup.com/products/omniplan/* ($99.99) is a great project planning tool. Works wonders for Gantt charts.
 * *"Things":http://culturedcode.com/things/* ($49.99) lets me keep track of my tasks GTD-style. I'm using the beta, which provides cloud-based sync to the iPhone and iPad apps. I'd wait to buy it until they finish their beta.
-* *"MindNode Pro":http://mindnode.com/* ($9.99) is super useful for mind-mapping, and I especially like it because it can be maniupulated entirely with the keyboard. The non-pro version is free, but the pro version allows you to place images/video/documents in your mind map. Super cool.
+* *"MindNode Pro":http://mindnode.com/* ($9.99) is super useful for mind-mapping, and I especially like it because it can be manipulated entirely with the keyboard. The non-pro version is free, but the pro version allows you to place images/video/documents in your mind map. Super cool.
 
 h2. Setting Up Development
 

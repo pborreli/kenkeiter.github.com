@@ -11,7 +11,7 @@ The day had started innocuously enough; I'd gotten a text from my CEO asking me 
 We've all done it: gone to a hackathon or other technology event with the hope that we might meet an engineer willing to let us refocus their horsepower on our problem. The conversation typically goes something like this:
 
 bq. You: Oh hey, so, what are you working on today?
-Engineer: Uh, I'm hand-crafting some artisnal Java bytecode. 
+Engineer: Uh, I'm hand-crafting some artisanal Java bytecode.
 _(witty banter)_
 You: Yeah, so I'm working on a <span id="this-text">Adult Friend Finder</span> for <span id="that-text">Pets</span>[1]. You should totally work with us because _&laquo;insert reason here&raquo;_.
 Engineer: Oh okay, yeah, that's cool -- I'm kind of tied up right now, I've been super busy working on this project for _client x_.
